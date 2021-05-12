@@ -1,20 +1,26 @@
 import logo from './logo.png';
 import './App.css';
-import back from "./back.jpg"
+import back from "./back.png"
 
 import Dropdown from "./components/Dropdown"
 import LoginForm from "./components/loginForm"
 import {Route, Link} from "react-router-dom";
+import rect from "./Rectangle1.svg"
+import recta from "./Rectangle404.svg"
+
 
 function App() {
   return (
-    <div className="App h-screen w-full px-10 " style={{ backgroundImage: `url('${back}')` }} >
+    <div className="App mt-10 " style={{ backgroundImage: `url('${back}')`,   backgroundRepeat: 'no-repeat',
+    width:'1654px', height:"1103px",opacity:"1"}} >
        <div>
-       <div class= "flex justify-between items center pt-4 " >
-         <div><a href="/"><img className="w-20 justify-self-end ml-10 mr-96" src={logo}></img></a></div> <div class= "flex justify-end ">
-           <button class="bg-none  rounded-md hover:bg-gray-100 text-gray-800 font-semibold h-10 py-2 px-4 border  border-gray-400 rounded shadow mr-10">
-           login as tutor
-           </button>
+       <div class= "flex items center pt-4 " style= {{backgroundImage:`url('${rect}')`, background:"transparent",
+width: "1600px",
+height: "412px",backgroundRepeat: 'no-repeat',opacity:"1" }}  >
+         <div><a className="text-white text-lg  w-32 h-5 px-10 py-11" href="/">ILRNU</a>
+           <p className= "pt-0 w-32 font-roboto text-white text-center   h-2 px-10" style= {{fontSize: "8px"}}>A universe of learning</p>
+         </div> <div class= " flex justify-around ">
+           <div className="mt-1 pt-3 mr-10 justify-items-center text-white " style= {{ backgroundImage: `url("${recta}")`, backgroundRepeat: "no-repeat", opacity:"1", width:"168px", height:"45px", fontSize:"16px", marginLeft:"1150px"}}>Join as a Tutor</div>
         <Dropdown></Dropdown>
           
          </div>
